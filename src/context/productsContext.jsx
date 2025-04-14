@@ -7,7 +7,7 @@ const ProductContext = createContext();
 export const ProductProvider = ({ children }) => {
     const [products, setProducts] = useState([]);
     const [filteredProducts, setFilteredProducts] = useState([]);
-    const backendUrl = 'http://localhost:3000';
+    const backendUrl = import.meta.env.VITE_BACKEND_URL;
     const { notificationsEnabled } = useNotificationContext(); // Obtenemos el estado de las notificaciones
     const { addNotification } = useNotifications(); // Obtenemos la función para agregar notificaciones
     

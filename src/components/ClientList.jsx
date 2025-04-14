@@ -14,7 +14,7 @@ const ClientList = ({
     clientInfo,
     showInfo,
 }) => {
-    const backendUrl = 'http://localhost:3000';
+    const backendUrl =import.meta.env.VITE_BACKEND_URL;
     const [isModalOpen, setIsModalOpen] = useState(false);
     const { clientes } = useClientContext();
     const user_id = localStorage.getItem("user_id");

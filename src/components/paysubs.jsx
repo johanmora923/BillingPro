@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { FaPaypal, FaBitcoin, FaMobileAlt, FaUniversity, FaWallet } from "react-icons/fa";
 
 const PaymentStep = () => {
-    const backend = "http://localhost:3000"; // URL base del backend
+    const backend = import.meta.env.VITE_BACKEND_URL; // URL base del backend
     const userId = window.localStorage.getItem("id_register"); // ID del usuario almacenado
     const [selectedMethod, setSelectedMethod] = useState(null); // Método de pago seleccionado
     const [isProcessing, setIsProcessing] = useState(false); // Estado para mostrar la carga

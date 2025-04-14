@@ -4,7 +4,7 @@ const ClientContext = createContext();
 
 export const ClientProvider = ({ children }) => {
     const [clientes, setClientes] = useState([]);
-    const backendUrl = "http://localhost:3000"; // URL del backend
+    const backendUrl = import.meta.env.VITE_BACKEND_URL;; // URL del backend
 
     // Solicitar la lista de clientes al montar el contexto
     useEffect(() => {

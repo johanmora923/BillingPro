@@ -5,7 +5,7 @@ import { useNotifications } from "../context/notificationsProvider";
 
 export const NotificationList = () => {
 const [notifications, setNotifications] = useState([])
-    const backendUrl = 'http://localhost:3000';
+    const backendUrl = import.meta.env.VITE_BACKEND_URL;
 
     const { showNotifications, removeNotification } = useNotifications()
 

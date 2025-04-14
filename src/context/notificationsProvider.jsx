@@ -8,7 +8,7 @@ const NotificationContext = createContext();
 export const NotificationsProvider = ({ children }) => {
     const [notifications, setNotifications] = useState([]);
     const [showNotifications, setShowNotifications] = useState(false);
-    const backendUrl = "http://localhost:3000";
+    const backendUrl =  import.meta.env.VITE_BACKEND_URL;
 
 
     // Agregar una notificación y enviarla al backend

@@ -4,7 +4,7 @@ const InvoiceHistoryContext = createContext();
 
 export const InvoiceHistoryProvider = ({ children }) => {
     const [invoices, setInvoices] = useState([]);
-    const backendUrl = "http://localhost:3000"; // URL del backend
+    const backendUrl = import.meta.env.VITE_BACKEND_URL;; // URL del backend
 
     // Solicitar el historial de facturas al montar el contexto
     useEffect(() => {

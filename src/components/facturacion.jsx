@@ -16,7 +16,7 @@ import { toast } from "sonner"; // Importamos la librería de notificaciones
 
 
 const Facturacion = () => {
-    const backendUrl = "http://localhost:3000"; // URL del backend
+    const backendUrl = import.meta.env.VITE_BACKEND_URL; // URL del backend
     const { step, setStep } = useStepContext(); // Control del paso actual
     const [search, setSearch] = useState(""); // Barra de búsqueda
     const { clientes, setClientes } = useClientContext()

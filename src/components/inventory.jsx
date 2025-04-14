@@ -6,7 +6,7 @@ import { FaEdit, FaTrashAlt } from "react-icons/fa";
 import { useProductContext } from "../context/productsContext";
 
 const InventoryComponent = () => {
-    const backendUrl = "http://localhost:3000"; // URL del backend
+    const backendUrl = import.meta.env.VITE_BACKEND_URL; // URL del backend
     const {products, setProducts, filteredProducts, setFilteredProducts} = useProductContext()
     const [isModalOpen, setIsModalOpen] = useState(false); // Estado del modal
     const [searchQuery, setSearchQuery] = useState(""); // Query de búsqueda

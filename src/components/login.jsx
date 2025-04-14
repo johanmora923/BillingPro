@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 const Login = () => {
-    const backend = 'http://localhost:3000';
+    const backend = import.meta.env.VITE_BACKEND_URL;
 
     const [formData, setFormData] = useState({
         name: '',

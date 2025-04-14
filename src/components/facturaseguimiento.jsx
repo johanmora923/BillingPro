@@ -7,7 +7,7 @@ const FacturaSeguimiento = ({ factura, onUpdate }) => {
     const [estadoPago, setEstadoPago] = useState(factura.estado || "Pendiente");
     const [metodoPago, setMetodoPago] = useState(factura.metodo_pago || "");
     const { setStep } = useStepContext();
-    const backendUrl = "http://localhost:3000";
+    const backendUrl = import.meta.env.VITE_BACKEND_URL;
 
     const convertirFecha = (fechaUTC) => {
         const fecha = new Date(fechaUTC);

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { usePlan } from "../context/planProvider";
 
 export const Register = ({onLogin}) =>{
-    const backend = 'http://localhost:3000';
+    const backend = import.meta.env.VITE_BACKEND_URL;
     const [formData, setFormData] = useState({
         name: '',
         email: '',

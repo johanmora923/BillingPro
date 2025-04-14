@@ -21,6 +21,7 @@ const Configuracion = () => {
     const [isPasswordVerified, setIsPasswordVerified] = useState(false);
     const [headerData, setHeaderData] = useState({});
     const { notificationsEnabled } = useNotificationContext();
+    const backend = import.meta.env.VITE_BACKEND_URL;
 
     useEffect(() => {
         const user_id = localStorage.getItem("user_id");
@@ -56,7 +57,7 @@ const Configuracion = () => {
     const handleSaveSettings = () => {
         const user_id = localStorage.getItem("user_id");
         toast.promise(
-            fetch(`http://localhost:3000/api/saveHeader`, {
+            fetch(`${backend}/api/saveHeader`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({

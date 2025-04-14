@@ -3,7 +3,8 @@ import { toast } from "sonner"; // Usamos la función de promesa de Sonner
 
 
 const InventoryStockUpdater = ({ products, setProducts, productId }) => {
-    const backendUrl = 'http://localhost:3000';
+    const backendUrl = import.meta.env.VITE_BACKEND_URL;
+    ;
     const [updatedStock, setUpdatedStock] = useState({}); // Estado para almacenar los cambios en el stock
 
     const handleStockChange = (productId, newStock) => {
